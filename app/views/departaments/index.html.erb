@@ -1,11 +1,13 @@
 <h1>Listado de Departamentos</h1>
-<table>
+<table class="striped">
     <tr>
         
         <thead>
             <th>Id</th>
             <th>Nombre</th>
             <th>Descripcion</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
         </thead>
     </tr>
     <% @departaments.each do |departament| %>
@@ -15,13 +17,11 @@
         <td><%= departament.id %></td>
         <td><%= departament.name %></td>
         <td><%= departament.description %></td>
+        <td> <%= link_to "Editar", edit_departament_path(departament) ,class: 'waves-effect waves-light btn green'%></td>
         <td>
-            
-            <%= link_to "Editar", edit_departament_path(departament) %>
-            <%= link_to "Eliminar", departament, method: :delete, data: {confirm: "¿Deseas eliminar este departamento?"}%>
-
-        
+            <%= link_to "Eliminar", departament, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
         </td>
     </tr>
         <% end %>
+    <%= link_to "Nuevo", new_departament_path ,class: 'waves-effect waves-light btn blue'%>
 </table>
