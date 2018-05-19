@@ -1,0 +1,27 @@
+<h1>Listado de Departamentos</h1>
+<table>
+    <tr>
+        
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+        </thead>
+    </tr>
+    <% @departaments.each do |departament| %>
+    <tr>
+    
+        
+        <td><%= departament.id %></td>
+        <td><%= departament.name %></td>
+        <td><%= departament.description %></td>
+        <td>
+            
+            <%= link_to "Editar", edit_departament_path(departament) %>
+            <%= link_to "Eliminar", departament, method: :delete, data: {confirm: "¿Deseas eliminar este departamento?"}%>
+
+        
+        </td>
+    </tr>
+        <% end %>
+</table>

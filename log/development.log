@@ -4343,3 +4343,389 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 318ms (Views: 306.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:36:22 -0500
+  [1m[35m (19.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3829232194756363395)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDepartaments (20180515230040)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (218.8ms)[0m  [1m[35mCREATE TABLE "departaments" ("id" bigserial primary key, "name" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180515230040_create_departaments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3829232194756363395)[0m
+  ↳ bin/rails:9
+  [1m[35m (1471.3ms)[0m  [1m[35mCREATE DATABASE "PQR_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (632.9ms)[0m  [1m[35mCREATE DATABASE "PQR_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (93.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (89.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3829232194756363395)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDepartaments (20180515230040)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (70.7ms)[0m  [1m[35mCREATE TABLE "departaments" ("id" bigserial primary key, "name" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180515230040_create_departaments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515230040"]]
+  ↳ bin/rails:9
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20180515231558)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (88.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "username" character varying, "name_1" character varying, "name_2" character varying, "last_name_1" character varying, "last_name_2" character varying, "number" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180515231558_devise_create_users.rb:5
+  [1m[35m (39.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20180515231558_devise_create_users.rb:45
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20180515231558_devise_create_users.rb:46
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515231558"]]
+  ↳ bin/rails:9
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDepartamentIdToUser (20180515232046)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "departament_id" bigint[0m
+  ↳ db/migrate/20180515232046_add_departament_id_to_user.rb:3
+  [1m[35m (36.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_departament_id" ON "users"  ("departament_id")[0m
+  ↳ db/migrate/20180515232046_add_departament_id_to_user.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_436c8a627c"
+FOREIGN KEY ("departament_id")
+  REFERENCES "departaments" ("id")
+[0m
+  ↳ db/migrate/20180515232046_add_departament_id_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515232046"]]
+  ↳ bin/rails:9
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStates (20180515233217)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (98.4ms)[0m  [1m[35mCREATE TABLE "states" ("id" bigserial primary key, "name" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180515233217_create_states.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515233217"]]
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePqrs (20180515233958)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (86.8ms)[0m  [1m[35mCREATE TABLE "pqrs" ("id" bigserial primary key, "user_id" bigint, "name_1" character varying, "name_2" character varying, "last_name_1" character varying, "last_name_2" character varying, "email" character varying, "number" character varying, "date" date, "description" character varying, "state_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_4c2ea092d6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_76521fc58e"
+FOREIGN KEY ("state_id")
+  REFERENCES "states" ("id")
+)[0m
+  ↳ db/migrate/20180515233958_create_pqrs.rb:3
+  [1m[35m (41.7ms)[0m  [1m[35mCREATE  INDEX  "index_pqrs_on_user_id" ON "pqrs"  ("user_id")[0m
+  ↳ db/migrate/20180515233958_create_pqrs.rb:3
+  [1m[35m (42.9ms)[0m  [1m[35mCREATE  INDEX  "index_pqrs_on_state_id" ON "pqrs"  ("state_id")[0m
+  ↳ db/migrate/20180515233958_create_pqrs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515233958"]]
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateDocs (20180515234327)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (87.3ms)[0m  [1m[35mCREATE TABLE "docs" ("id" bigserial primary key, "pqr_id" bigint, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b38c37f261"
+FOREIGN KEY ("pqr_id")
+  REFERENCES "pqrs" ("id")
+)[0m
+  ↳ db/migrate/20180515234327_create_docs.rb:3
+  [1m[35m (39.4ms)[0m  [1m[35mCREATE  INDEX  "index_docs_on_pqr_id" ON "docs"  ("pqr_id")[0m
+  ↳ db/migrate/20180515234327_create_docs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515234327"]]
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAudits (20180515235351)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (74.8ms)[0m  [1m[35mCREATE TABLE "audits" ("id" bigserial primary key, "user_id" bigint, "pqr_id" bigint, "name_1" character varying, "name_2" character varying, "last_name_1" character varying, "last_name_2" character varying, "description" text, "action" character varying, "backup" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_e6d7b3fb68"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_0b6455d36c"
+FOREIGN KEY ("pqr_id")
+  REFERENCES "pqrs" ("id")
+)[0m
+  ↳ db/migrate/20180515235351_create_audits.rb:3
+  [1m[35m (34.4ms)[0m  [1m[35mCREATE  INDEX  "index_audits_on_user_id" ON "audits"  ("user_id")[0m
+  ↳ db/migrate/20180515235351_create_audits.rb:3
+  [1m[35m (31.7ms)[0m  [1m[35mCREATE  INDEX  "index_audits_on_pqr_id" ON "audits"  ("pqr_id")[0m
+  ↳ db/migrate/20180515235351_create_audits.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180515235351"]]
+  ↳ bin/rails:9
+  [1m[35m (16.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateReviews (20180516003738)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (69.0ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "pqr_id" bigint, "user_id" bigint, "comment" text, "date" date, "finished" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_7b0f52a4ff"
+FOREIGN KEY ("pqr_id")
+  REFERENCES "pqrs" ("id")
+, CONSTRAINT "fk_rails_74a66bd6c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180516003738_create_reviews.rb:3
+  [1m[35m (41.7ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_pqr_id" ON "reviews"  ("pqr_id")[0m
+  ↳ db/migrate/20180516003738_create_reviews.rb:3
+  [1m[35m (54.0ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_user_id" ON "reviews"  ("user_id")[0m
+  ↳ db/migrate/20180516003738_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180516003738"]]
+  ↳ bin/rails:9
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateNotifications (20180516011033)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (70.3ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" bigserial primary key, "message" character varying, "pqr_id" bigint, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_76a183c724"
+FOREIGN KEY ("pqr_id")
+  REFERENCES "pqrs" ("id")
+, CONSTRAINT "fk_rails_b080fb4855"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180516011033_create_notifications.rb:3
+  [1m[35m (40.8ms)[0m  [1m[35mCREATE  INDEX  "index_notifications_on_pqr_id" ON "notifications"  ("pqr_id")[0m
+  ↳ db/migrate/20180516011033_create_notifications.rb:3
+  [1m[35m (31.5ms)[0m  [1m[35mCREATE  INDEX  "index_notifications_on_user_id" ON "notifications"  ("user_id")[0m
+  ↳ db/migrate/20180516011033_create_notifications.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180516011033"]]
+  ↳ bin/rails:9
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAnswers (20180516011846)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (73.9ms)[0m  [1m[35mCREATE TABLE "answers" ("id" bigserial primary key, "pqr_id" bigint, "user_id" bigint, "comment" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_aed652c05a"
+FOREIGN KEY ("pqr_id")
+  REFERENCES "pqrs" ("id")
+, CONSTRAINT "fk_rails_584be190c2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20180516011846_create_answers.rb:3
+  [1m[35m (41.5ms)[0m  [1m[35mCREATE  INDEX  "index_answers_on_pqr_id" ON "answers"  ("pqr_id")[0m
+  ↳ db/migrate/20180516011846_create_answers.rb:3
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE  INDEX  "index_answers_on_user_id" ON "answers"  ("user_id")[0m
+  ↳ db/migrate/20180516011846_create_answers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180516011846"]]
+  ↳ bin/rails:9
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-18 21:38:15.092936"], ["updated_at", "2018-05-18 21:38:15.092936"]]
+  ↳ bin/rails:9
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3829232194756363395)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:38:43 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:38:43 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:38:44 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:38:59 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16313ms (Views: 16311.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 16771ms (Views: 16769.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1302ms (Views: 1300.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 17177ms (Views: 17130.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 16:48:07 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 7211ms (Views: 7180.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-18 16:48:22 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (264.1ms)
+Completed 200 OK in 441ms (Views: 344.7ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/departaments" for 127.0.0.1 at 2018-05-18 16:48:45 -0500
+Processing by DepartamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dEn3kYe2RN2aFMJcc6YpibbJUgTdLvsitQfopS+Z48SBTD7i080+7Vu44QlK3/ZgnfGayF/7IICtHk4MJVHbxg==", "departament"=>{"name"=>"Admin1", "description"=>"Administrador"}, "commit"=>"Create Departament"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/departaments_controller.rb:12
+  [1m[36mDepartament Create (111.4ms)[0m  [1m[32mINSERT INTO "departaments" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Admin1"], ["description", "Administrador"], ["created_at", "2018-05-18 21:48:45.476119"], ["updated_at", "2018-05-18 21:48:45.476119"]]
+  ↳ app/controllers/departaments_controller.rb:12
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/departaments_controller.rb:12
+Redirected to http://localhost:3000/departaments
+Completed 302 Found in 129ms (ActiveRecord: 124.5ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-18 16:48:45 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:11
+  Rendered departaments/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 117ms (Views: 115.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/departaments/1" for 127.0.0.1 at 2018-05-18 16:48:55 -0500
+Processing by DepartamentsController#delete as HTML
+  Parameters: {"authenticity_token"=>"7WTY+y3b2x0krRpPcZ9yRG91NqNvD+JbQvaEhpsEb1EYYRGIeaChLeUBORpI5q2tRE3+b+3aOfla7yIvkcxXUw==", "id"=>"1"}
+  [1m[36mDepartament Load (1.5ms)[0m  [1m[34mSELECT  "departaments".* FROM "departaments" WHERE "departaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departaments_controller.rb:33
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/departaments_controller.rb:34
+  [1m[36mDepartament Destroy (1.0ms)[0m  [1m[31mDELETE FROM "departaments" WHERE "departaments"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/departaments_controller.rb:34
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/departaments_controller.rb:34
+Redirected to http://localhost:3000/departaments
+Completed 302 Found in 60ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-18 16:48:55 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.3ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:11
+  Rendered departaments/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-18 16:49:55 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:11
+  Rendered departaments/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-18 16:49:56 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:11
+  Rendered departaments/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 94ms (Views: 91.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-18 16:50:11 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:11
+  Rendered departaments/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 104ms (Views: 101.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-18 16:52:37 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 89ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/departaments" for 127.0.0.1 at 2018-05-18 16:52:51 -0500
+Processing by DepartamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"raSyV7bgXWNEdZzj9Q5Qb8S00cHNUmABjmbmaVlkSfxYoXsk4psnU4XZv7bMd4+G74wZDU+Hu6OWf0DAU6xx/g==", "departament"=>{"name"=>"Ivan ", "description"=>"Ivan la puta"}, "commit"=>"Create Departament"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/departaments_controller.rb:12
+  [1m[36mDepartament Create (0.4ms)[0m  [1m[32mINSERT INTO "departaments" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ivan "], ["description", "Ivan la puta"], ["created_at", "2018-05-18 21:52:51.536214"], ["updated_at", "2018-05-18 21:52:51.536214"]]
+  ↳ app/controllers/departaments_controller.rb:12
+  [1m[35m (48.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/departaments_controller.rb:12
+Redirected to http://localhost:3000/departaments
+Completed 302 Found in 53ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-18 16:52:51 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:11
+  Rendered departaments/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 104ms (Views: 101.0ms | ActiveRecord: 0.5ms)
+
+
