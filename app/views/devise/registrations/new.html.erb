@@ -47,13 +47,17 @@
       <%= f.text_field :username, autofocus: true %>
     </div>
  </div>
+ <div class="input-field col s6">
+          <label for="last_name">Last Name</label>
+          <input id="last_name" type="text" class="validate">
+</div>
  <div class="row">
 
-    <div class="input-field col s6">
+    <div class="input-field col s12">
     <%= f.select "departament_id", Departament.all.collect {|x| [x.name, x.id]},{}, class: "multiple"%>
     </div>
 
-    <div class="input-field col s6 ">
+    <div class="input-field col s12 ">
        <%= f.label :number %><br/>
        <%= f.text_field :number, autofocus: true %>
     </div>
