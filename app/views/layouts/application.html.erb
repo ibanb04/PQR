@@ -10,6 +10,20 @@
   </head>
 
   <body>
+      
+      <nav>
+        <div class="nav-wrapper blue">
+            <ul id="nav-mobile" class="left hide-on-med-and-down right">
+            <% if user_signed_in? %>
+            <li>
+              <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+            </li>
+            <% end %>
+            </ul>
+        </div>
+      
+      </nav>
+
     <div class="container">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
