@@ -1,0 +1,15 @@
+<%= form_for @state do |f| %>
+
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true %>
+    </div>
+    <div>
+        <%= f.label :description %>
+        <%= f.text_field :description, autofocus: true %>
+    </div>
+    <div>
+        <%= f.submit "Actualizar", class: 'waves-effect waves-light btn ligth-orange' %>
+    </div>
+    
+    <% end %>

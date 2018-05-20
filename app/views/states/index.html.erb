@@ -1,0 +1,27 @@
+<h1>Listado de Estados del PQR</h1>
+<table class="striped">
+    <tr>
+        
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            
+            
+        </thead>
+    </tr>
+    <% @states.each do |state| %>
+    <tr>
+    
+        
+        <td><%= state.id %></td>
+        <td><%= state.name %></td>
+        <td><%= state.description %></td>
+        <td> <%= link_to "Editar", edit_state_path(state) ,class: 'waves-effect waves-light btn green'%></td>
+        <td>
+            <%= link_to "Eliminar", state, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+        </td>
+    </tr>
+        <% end %>
+        <%= link_to "Nuevo", new_state_path ,class: 'waves-effect waves-light btn blue'%>
+</table>

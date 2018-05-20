@@ -14,6 +14,8 @@ gem 'sass-rails', '~> 5.0'
 #instalacion de devise
 gem 'jquery-rails'
 
+gem 'jquery-rails'
+
 gem 'materialize-sass', '~> 1.0.0.rc1'
 gem 'material_icons'
 

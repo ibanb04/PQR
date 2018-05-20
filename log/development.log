@@ -6291,6 +6291,7 @@ Completed 200 OK in 131ms (Views: 127.2ms | ActiveRecord: 0.8ms)
 >>>>>>> 3ab06c95aa578f9c043242e7779c689dfb8f6e40
 
 
+<<<<<<< HEAD
 Started GET "/departaments" for 127.0.0.1 at 2018-05-20 00:28:57 +0000
   
 PG::ConnectionBad (could not connect to server: No such file or directory
@@ -6315,6 +6316,91 @@ activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_p
 activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
 activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
 activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+=======
+Started GET "/departaments" for 127.0.0.1 at 2018-05-19 18:05:02 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.7ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 6907ms (Views: 6814.9ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-19 18:07:54 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 223ms (Views: 115.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-19 19:30:55 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 791ms (Views: 778.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-19 20:02:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/states"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-19 20:02:55 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
 actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
 activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -6346,6 +6432,1558 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states/create" for 127.0.0.1 at 2018-05-19 20:05:36 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states/new" for 127.0.0.1 at 2018-05-19 20:05:44 -0500
+Processing by StatesController#new as HTML
+Completed 406 Not Acceptable in 347ms (ActiveRecord: 142.7ms)
+
+
+  
+ActionController::UnknownFormat (StatesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states/new" for 127.0.0.1 at 2018-05-19 20:08:30 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 745ms (Views: 742.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-19 21:17:30 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.7ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 771ms (Views: 729.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-19 21:19:31 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (1.3ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 119ms (Views: 111.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-19 21:22:37 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 125ms (Views: 93.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 09:47:06 -0500
+  [1m[35m (22.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (173.2ms)
+Completed 200 OK in 2804ms (Views: 2740.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 09:47:13 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.7ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 254ms (Views: 243.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 09:54:45 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/states" for 127.0.0.1 at 2018-05-20 09:55:00 -0500
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/departaments" for 127.0.0.1 at 2018-05-20 09:56:57 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.6ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 175ms (Views: 100.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 09:56:58 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @departament do |f| %>
+    2: 
+    3: <div>
+    4:     <%= f.label :name %>
+  
+app/views/departaments/new.html.erb:1:in `_app_views_departaments_new_html_erb___3708922786034442330_47101529156060'
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 09:57:11 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 120ms (Views: 98.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 10:02:50 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 123ms (Views: 102.5ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/departaments" for 127.0.0.1 at 2018-05-20 10:03:00 -0500
+Processing by DepartamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i6fl5mkQ66KdTRj5NiRFtLvTin+D5nW2dtynpQ3Z8SfMXW256suFoO+lSJck4oPM+TyVKoxsCOzzwMZSHd102Q==", "departament"=>{"name"=>"Admin1", "description"=>"Este es el admin 1"}, "commit"=>"Create Departament"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/departaments_controller.rb:12
+  [1m[36mDepartament Create (38.6ms)[0m  [1m[32mINSERT INTO "departaments" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Admin1"], ["description", "Este es el admin 1"], ["created_at", "2018-05-20 15:03:00.725553"], ["updated_at", "2018-05-20 15:03:00.725553"]]
+  ↳ app/controllers/departaments_controller.rb:12
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/departaments_controller.rb:12
+Redirected to http://localhost:3000/departaments
+Completed 302 Found in 85ms (ActiveRecord: 76.5ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-20 10:03:00 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 94ms (Views: 90.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:03:17 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.7ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 107ms (Views: 97.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 10:03:27 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 103ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/states" for 127.0.0.1 at 2018-05-20 10:03:49 -0500
+Processing by StatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cgNMlmt3G9hP2bSMOP74GkuxxJYzfSMQg7FUTgyuHac1+cTJ6Kx12j0x5OIqOD5iCV7bwzz3XkoGrTW5HKqYWQ==", "state"=>{"name"=>"Admin2", "description"=>"Este es el admin 2"}, "commit"=>"Create State"}
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `params_require' for #<StatesController:0x007f224dfc8890>
+Did you mean?  parse_uri):
+  
+app/controllers/states_controller.rb:22:in `state_params'
+app/controllers/states_controller.rb:12:in `create'
+Started POST "/states" for 127.0.0.1 at 2018-05-20 10:04:27 -0500
+Processing by StatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cgNMlmt3G9hP2bSMOP74GkuxxJYzfSMQg7FUTgyuHac1+cTJ6Kx12j0x5OIqOD5iCV7bwzz3XkoGrTW5HKqYWQ==", "state"=>{"name"=>"Admin2", "description"=>"Este es el admin 2"}, "commit"=>"Create State"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permite' for #<ActionController::Parameters:0x007f224d4950b8>
+Did you mean?  permit
+               permit!):
+  
+app/controllers/states_controller.rb:22:in `state_params'
+app/controllers/states_controller.rb:12:in `create'
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 10:04:54 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 138ms (Views: 116.7ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/states" for 127.0.0.1 at 2018-05-20 10:05:02 -0500
+Processing by StatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UnwC2PR6LVY03fI7newnWkjocivQmnw22+q4L2U5atIVhoqHd6FDVEY1olWPKuEiCgdtft8QAWxe9tnYdT3vLA==", "state"=>{"name"=>"Admin2", "description"=>"Este es el admin 2"}, "commit"=>"Create State"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:13
+  [1m[36mState Create (1.1ms)[0m  [1m[32mINSERT INTO "states" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Admin2"], ["description", "Este es el admin 2"], ["created_at", "2018-05-20 15:05:02.965076"], ["updated_at", "2018-05-20 15:05:02.965076"]]
+  ↳ app/controllers/states_controller.rb:13
+  [1m[35m (45.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:13
+Redirected to http://localhost:3000/states
+Completed 302 Found in 61ms (ActiveRecord: 46.8ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:05:03 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (1.0ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 138ms (Views: 135.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:06:03 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.8ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 131ms (Views: 127.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 10:06:07 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 112ms (Views: 110.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:06:11 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 96ms (Views: 93.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:13:04 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.7ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 129ms (Views: 114.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/states/1/edit" for 127.0.0.1 at 2018-05-20 10:13:07 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 132ms (Views: 93.6ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/states/1" for 127.0.0.1 at 2018-05-20 10:13:21 -0500
+Processing by StatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n85SfD/0svz+0gXFePNWl89qiBUn85+9MVDviNY9krwp4Qy6rhTRxPqO0FmG4ln4JCwqH6iXO9CvZ6yiuG+LEQ==", "state"=>{"name"=>"Revisadoqqqq", "description"=>"El PQR ha sidqqqqo revisado"}, "commit"=>"Update State", "id"=>"1"}
+  [1m[36mState Load (1.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:25
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `find' for #<State:0x007f22484500f8>):
+  
+app/controllers/states_controller.rb:26:in `update'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:14:32 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 99ms (Views: 88.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/states/1/edit" for 127.0.0.1 at 2018-05-20 10:14:35 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 117ms (Views: 112.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/states/1" for 127.0.0.1 at 2018-05-20 10:14:43 -0500
+Processing by StatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VU6734cHCBQZIcdh+kpIMd0+MFfGwQtsPUrNjm5EK0DjYeUZFudrLB19Ev0EW0deNniSXUmlrwGjfY6kABYy7Q==", "state"=>{"name"=>"Revisadoqqqq", "description"=>"El PQR ha sido revisadoqqqqq"}, "commit"=>"Update State", "id"=>"1"}
+  [1m[36mState Load (1.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:26
+  [1m[36mState Update (0.6ms)[0m  [1m[33mUPDATE "states" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "states"."id" = $4[0m  [["name", "Revisadoqqqq"], ["description", "El PQR ha sido revisadoqqqqq"], ["updated_at", "2018-05-20 15:14:43.070292"], ["id", 1]]
+  ↳ app/controllers/states_controller.rb:26
+  [1m[35m (32.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:26
+Redirected to http://localhost:3000/states
+Completed 302 Found in 42ms (ActiveRecord: 34.1ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:14:43 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 118ms (Views: 115.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/states/1" for 127.0.0.1 at 2018-05-20 10:14:50 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/states/1" for 127.0.0.1 at 2018-05-20 10:16:24 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:16:28 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 129ms (Views: 115.4ms | ActiveRecord: 6.5ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:16:33 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:17:27 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 104ms (Views: 92.5ms | ActiveRecord: 6.2ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:17:31 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:18:55 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 105ms (Views: 94.9ms | ActiveRecord: 5.1ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:19:00 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:19:28 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (371.9ms)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `states' for #<#<Class:0x007f22502f7f00>:0x007f224d3ff8b0>
+Did you mean?  state
+               @states):
+    19:         <td><%= state.description %></td>
+    20:         <td> <%= link_to "Editar", edit_state_path(state) ,class: 'waves-effect waves-light btn green'%></td>
+    21:         <td>
+    22:             <%= link_to "Eliminar", states, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+    23:         </td>
+    24:     </tr>
+    25:         <% end %>
+  
+app/views/states/index.html.erb:22:in `block in _app_views_states_index_html_erb___2502344911525017860_69892650871960'
+app/views/states/index.html.erb:13:in `_app_views_states_index_html_erb___2502344911525017860_69892650871960'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:19:36 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.8ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 133ms (Views: 129.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:19:41 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/departaments" for 127.0.0.1 at 2018-05-20 10:20:38 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.7ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 109ms (Views: 97.8ms | ActiveRecord: 6.2ms)
+
+
+Started DELETE "/departaments/7" for 127.0.0.1 at 2018-05-20 10:20:43 -0500
+Processing by DepartamentsController#delete as HTML
+  Parameters: {"authenticity_token"=>"KK8tvwNo9tK1WF17osuwVMQ4Em/Mbvv/0bErDdIPrwJvVaXggLOY0MewDRWwDXYshtcNOsPkhqVUrUr6wgsq/A==", "id"=>"7"}
+  [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT  "departaments".* FROM "departaments" WHERE "departaments"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/departaments_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/departaments_controller.rb:34
+  [1m[36mDepartament Destroy (24.1ms)[0m  [1m[31mDELETE FROM "departaments" WHERE "departaments"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/departaments_controller.rb:34
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/departaments_controller.rb:34
+Redirected to http://localhost:3000/departaments
+Completed 302 Found in 54ms (ActiveRecord: 46.6ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-20 10:20:43 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 121ms (Views: 118.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/departaments/6" for 127.0.0.1 at 2018-05-20 10:20:47 -0500
+Processing by DepartamentsController#delete as HTML
+  Parameters: {"authenticity_token"=>"KS0z0e/keYpZ220IFYte/hDenyWvjTzRe1PcH6Z8rqRu17uObD8XiCszPWYHTZiGUjGAcKAHQYv+T73otngrWg==", "id"=>"6"}
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT  "departaments".* FROM "departaments" WHERE "departaments"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/departaments_controller.rb:33
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/departaments_controller.rb:34
+  [1m[36mDepartament Destroy (1.3ms)[0m  [1m[31mDELETE FROM "departaments" WHERE "departaments"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/departaments_controller.rb:34
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/departaments_controller.rb:34
+Redirected to http://localhost:3000/departaments
+Completed 302 Found in 38ms (ActiveRecord: 30.8ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-20 10:20:47 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.6ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 141ms (Views: 138.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:21:24 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 123ms (Views: 107.6ms | ActiveRecord: 8.7ms)
+
+
+Started DELETE "/states/1" for 127.0.0.1 at 2018-05-20 10:21:28 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:24:50 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 121ms (Views: 109.6ms | ActiveRecord: 6.6ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:24:52 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:25:46 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:25:48 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 132ms (Views: 118.3ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:25:51 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:27:42 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 120ms (Views: 110.5ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/states/2" for 127.0.0.1 at 2018-05-20 10:27:45 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/states/2"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:29:36 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.8ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 423ms (Views: 398.6ms | ActiveRecord: 8.3ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:29:40 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states/2" for 127.0.0.1 at 2018-05-20 10:30:46 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:31:18 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 119ms (Views: 88.5ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:31:20 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:33:00 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 106ms (Views: 93.0ms | ActiveRecord: 5.9ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:33:02 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:33:35 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+>>>>>>> e3e78cfd0e3afdbf99b5dd692ffab1256670cbf3
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/departaments" for 127.0.0.1 at 2018-05-20 00:30:19 +0000
   [1m[35m (22.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
@@ -6497,10 +8135,703 @@ Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.3ms)
 Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 00:43:31 +0000
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+=======
+Started GET "/states/destroy" for 127.0.0.1 at 2018-05-20 10:34:17 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states/delete" for 127.0.0.1 at 2018-05-20 10:34:23 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for StatesController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states/2/delete" for 127.0.0.1 at 2018-05-20 10:34:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/states/2/delete"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:35:30 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 119ms (Views: 106.6ms | ActiveRecord: 7.2ms)
+
+
+Started DELETE "/states/2" for 127.0.0.1 at 2018-05-20 10:35:33 -0500
+Processing by StatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jPNj0EVbo2+ZQxcztsEsBggamWLN3gafP/BE9VlVUhTLCeuPxoDNbeurR12kB+p+SvWGN8JUe8W67CUCSVHX6g==", "id"=>"2"}
+  [1m[36mState Load (1.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:35
+  [1m[36mState Destroy (15.1ms)[0m  [1m[31mDELETE FROM "states" WHERE "states"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/states_controller.rb:35
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:35
+Redirected to http://localhost:3000/states
+Completed 302 Found in 46ms (ActiveRecord: 36.8ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:35:33 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 131ms (Views: 127.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/states/1" for 127.0.0.1 at 2018-05-20 10:35:39 -0500
+Processing by StatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jRdT3sRg42DfrH39el52drQGCsSk1a2l5y/Wav+tmC7K7duBR7uNYq1ELZNomLAO9ukVkatf0P9iM7ed76kd0A==", "id"=>"1"}
+  [1m[36mState Load (1.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:35
+  [1m[36mState Destroy (1.6ms)[0m  [1m[31mDELETE FROM "states" WHERE "states"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/states_controller.rb:35
+  [1m[35m (52.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:35
+Redirected to http://localhost:3000/states
+Completed 302 Found in 61ms (ActiveRecord: 54.9ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:35:39 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 120ms (Views: 117.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 10:35:42 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 132ms (Views: 130.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 10:36:38 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 101ms (Views: 98.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/states" for 127.0.0.1 at 2018-05-20 10:51:54 -0500
+Processing by StatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+2xR/zTdMFyBE8cHqxdQZG3ChpgnmGj3KuOWnc7eb8oFzkYfwgawwDsH3IMaps501gVT28UHPlZt++tZz/8QQ==", "state"=>{"name"=>"", "description"=>""}, "commit"=>"Create State"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:13
+  [1m[36mState Create (0.7ms)[0m  [1m[32mINSERT INTO "states" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["description", ""], ["created_at", "2018-05-20 15:51:54.706259"], ["updated_at", "2018-05-20 15:51:54.706259"]]
+  ↳ app/controllers/states_controller.rb:13
+  [1m[35m (57.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:13
+Redirected to http://localhost:3000/states
+Completed 302 Found in 67ms (ActiveRecord: 58.1ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:51:54 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 92ms (Views: 90.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:52:13 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 114ms (Views: 111.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:52:17 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:9: syntax error, unexpected ')', expecting =>
+ion, autofocus: true, require);@output_buffer.safe_append='
+                              ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: 'waves-effect waves-light btn
+                              ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+safe_append='    '.freeze; end ;
+                              ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/states/edit.html.erb:9: syntax error, unexpected ')', expecting =>
+app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+app/views/states/edit.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+app/views/states/edit.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/states/edit.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:52:30 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: 'waves-effect waves-light btn
+                              ^):
+  
+app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:52:31 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: 'waves-effect waves-light btn
+                              ^):
+  
+app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+Started GET "/states/" for 127.0.0.1 at 2018-05-20 10:52:45 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 103ms (Views: 101.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:52:47 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: 'waves-effect waves-light btn
+                              ^):
+  
+app/views/states/edit.html.erb:12: syntax error, unexpected tLABEL, expecting '='
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:53:10 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 98ms (Views: 93.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:54:48 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 96ms (Views: 93.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:55:00 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (1.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 117ms (Views: 111.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:55:09 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 121ms (Views: 117.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:55:57 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 94ms (Views: 89.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:56:09 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.8ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:56:20 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 136ms (Views: 134.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:56:46 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.9ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 100ms (Views: 96.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:56:49 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 121ms (Views: 118.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:56:56 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 101ms (Views: 93.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:57:02 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 106ms (Views: 101.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:57:04 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 109ms (Views: 107.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:57:10 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 90ms (Views: 86.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:57:18 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 104ms (Views: 101.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:57:20 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.7ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 111ms (Views: 106.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:57:22 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 99ms (Views: 94.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:58:02 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 161ms (Views: 158.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 10:58:07 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 95ms (Views: 93.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:58:28 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 110ms (Views: 106.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:59:21 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:59:43 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.7ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 108ms (Views: 103.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:59:44 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 10:59:49 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 110ms (Views: 104.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/states/3/edit" for 127.0.0.1 at 2018-05-20 11:00:06 -0500
+Processing by StatesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mState Load (0.2ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:21
+  Rendering states/edit.html.erb within layouts/application
+  Rendered states/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 102ms (Views: 99.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 11:36:53 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (1.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 125ms (Views: 121.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/states/3" for 127.0.0.1 at 2018-05-20 11:36:59 -0500
+Processing by StatesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uAmzWw5dmaZpQphWPxxGx3wyi+OokUZc7d6sGPKuDCr/8zsEjYb3pBuqyDgt2oC/Pt2UtqcbOwZows3v4qqJ1A==", "id"=>"3"}
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/states_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:35
+  [1m[36mState Destroy (1.2ms)[0m  [1m[31mDELETE FROM "states" WHERE "states"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/states_controller.rb:35
+  [1m[35m (70.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:35
+Redirected to http://localhost:3000/states
+Completed 302 Found in 126ms (ActiveRecord: 71.9ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 11:37:00 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 129ms (Views: 126.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 11:51:35 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (1.2ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:51:43 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 7.4ms)
+
+
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:53: syntax error, unexpected ')', expecting =>
+e",{prompt: 'Select Person'} );@output_buffer.safe_append='
+                              ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:88: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/devise/registrations/new.html.erb:53: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:88: syntax error, unexpected keyword_end, expecting ')'
+app/views/devise/registrations/new.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/devise/registrations/new.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:52:34 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:53: syntax error, unexpected ')', expecting =>
+rompt: 'Select Departament'} );@output_buffer.safe_append='
+                              ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:88: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/devise/registrations/new.html.erb:53: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:88: syntax error, unexpected keyword_end, expecting ')'
+app/views/devise/registrations/new.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/devise/registrations/new.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:52:52 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:53: syntax error, unexpected ')', expecting =>
+rompt: "Select Departament"} );@output_buffer.safe_append='
+                              ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:88: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/jesusramosv/ProyectosRuby/PQR/app/views/devise/registrations/new.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/devise/registrations/new.html.erb:53: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:88: syntax error, unexpected keyword_end, expecting ')'
+app/views/devise/registrations/new.html.erb:99: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/devise/registrations/new.html.erb:101: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:53:31 -0500
+>>>>>>> e3e78cfd0e3afdbf99b5dd692ffab1256670cbf3
 Processing by Devise::RegistrationsController#new as HTML
   Rendering devise/registrations/new.html.erb within layouts/application
   [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
   ↳ app/views/devise/registrations/new.html.erb:53
+<<<<<<< HEAD
   Rendered devise/shared/_links.html.erb (0.8ms)
   Rendered devise/registrations/new.html.erb within layouts/application (26.8ms)
 Completed 200 OK in 353ms (Views: 317.1ms | ActiveRecord: 7.6ms)
@@ -6517,10 +8848,19 @@ Completed 200 OK in 95ms (Views: 93.4ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 00:43:33 +0000
+=======
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (172.5ms)
+Completed 200 OK in 259ms (Views: 252.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:55:19 -0500
+>>>>>>> e3e78cfd0e3afdbf99b5dd692ffab1256670cbf3
 Processing by Devise::RegistrationsController#new as HTML
   Rendering devise/registrations/new.html.erb within layouts/application
   [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
   ↳ app/views/devise/registrations/new.html.erb:53
+<<<<<<< HEAD
   Rendered devise/shared/_links.html.erb (3.0ms)
   Rendered devise/registrations/new.html.erb within layouts/application (15.0ms)
 Completed 200 OK in 144ms (Views: 140.6ms | ActiveRecord: 0.5ms)
@@ -6871,5 +9211,86 @@ Processing by Devise::RegistrationsController#new as HTML
   Rendered devise/shared/_links.html.erb (1.2ms)
   Rendered devise/registrations/new.html.erb within layouts/application (10.2ms)
 Completed 200 OK in 260ms (Views: 257.9ms | ActiveRecord: 0.3ms)
+=======
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 308ms (Views: 306.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:58:40 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  [1m[36mDepartament Load (0.8ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/devise/registrations/new.html.erb:53
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (193.5ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:58:47 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  [1m[36mDepartament Load (0.6ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/devise/registrations/new.html.erb:53
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (154.9ms)
+Completed 200 OK in 5774ms (Views: 5770.2ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 12253ms (Views: 12194.3ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 11:59:46 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  [1m[36mDepartament Load (0.6ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/devise/registrations/new.html.erb:53
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 923ms (Views: 874.0ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-20 12:01:00 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AkZvV91B8ckYOZx4cbUNJ5eKyONJwkga2Z6tsi7puQ9FvOcIXpqfy2rRzBZjc8tf1WXXtkZINUBcgsxFPu088Q==", "user"=>{"name_1"=>"hebertu", "name_2"=>"sanyu", "last_name_1"=>"rails", "last_name_2"=>"magalys", "email"=>"heberto@gmail.com", "username"=>"hebertomyhuevo", "departament_id"=>"5", "number"=>"3221", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Enviar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Exists (33.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "heberto@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT  "departaments".* FROM "departaments" WHERE "departaments"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/app/controllers/devise/registrations_controller.rb:19
+  [1m[36mUser Create (33.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "name_1", "name_2", "last_name_1", "last_name_2", "number", "created_at", "updated_at", "departament_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["email", "heberto@gmail.com"], ["encrypted_password", "$2a$11$uI8X.KR08F3gEMbrsePzf.AwyA.5EG4jkRMnNaG9qzSQnQGfO43NG"], ["username", "hebertomyhuevo"], ["name_1", "hebertu"], ["name_2", "sanyu"], ["last_name_1", "rails"], ["last_name_2", "magalys"], ["number", "3221"], ["created_at", "2018-05-20 17:01:01.032997"], ["updated_at", "2018-05-20 17:01:01.032997"], ["departament_id", 5]]
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/app/controllers/devise/registrations_controller.rb:19
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/app/controllers/devise/registrations_controller.rb:19
+Redirected to http://localhost:3000/
+Completed 302 Found in 556ms (ActiveRecord: 92.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 12:01:01 -0500
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 115ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 12:01:18 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 111ms (Views: 87.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/departaments" for 127.0.0.1 at 2018-05-20 12:01:26 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 139ms (Views: 103.8ms | ActiveRecord: 0.4ms)
+>>>>>>> e3e78cfd0e3afdbf99b5dd692ffab1256670cbf3
 
 
