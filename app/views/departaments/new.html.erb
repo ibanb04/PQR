@@ -1,15 +1,18 @@
-<%= form_for @departament do |f| %>
+<section class="valign-wrapper">
 
-<div>
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true %>
-</div>
-<div>
-    <%= f.label :description %>
-    <%= f.text_field :description, autofocus: true %>
-</div>
-<div>
-    <%= f.submit "Crear",  class: 'waves-effect waves-light btn blue'%>
-</div>
+    <%= form_for @departament do |f| %>
 
-<% end %>
+        <div>
+            <%= f.label :name %>
+            <%= f.text_field :name, autofocus: true %>
+        </div>
+        <div>
+            <%= f.label :description %>
+            <%= f.text_field :description, autofocus: true %>
+        </div>
+        <div>
+            <%= f.submit "Crear",  class: 'waves-effect waves-light btn blue'%>
+        </div>
+
+    <% end %>
+</section>

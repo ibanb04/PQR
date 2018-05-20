@@ -10321,6 +10321,7 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 217ms (Views: 215.1ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-05-20 17:00:50 +0000
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
@@ -10445,5 +10446,973 @@ Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
   Rendered home/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/departaments" for 127.0.0.1 at 2018-05-20 18:04:57 -0500
+Processing by DepartamentsController#index as HTML
+  Rendering departaments/index.html.erb within layouts/application
+  [1m[36mDepartament Load (0.8ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/departaments/index.html.erb:13
+  Rendered departaments/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 129ms (Views: 112.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/pqr/" for 127.0.0.1 at 2018-05-20 18:07:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pqr"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pqr/" for 127.0.0.1 at 2018-05-20 18:08:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/pqr"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/states" for 127.0.0.1 at 2018-05-20 18:14:23 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.8ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 138ms (Views: 97.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 18:16:33 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  Rendered pqrs/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Pqr:0x00555c96044258>):
+    18:             <th>Eliminar</th>
+    19:         </thead>
+    20:     </tr>
+    21:     <% @pqrs.each do |pqr| %>
+    22:     <tr>
+    23:     
+    24:         
+  
+app/views/pqrs/index.html.erb:21:in `_app_views_pqrs_index_html_erb__4325834582762867183_46928045422660'
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 18:17:36 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (1.0ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  Rendered pqrs/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 124ms (Views: 111.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:21:52 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 116ms (Views: 94.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:24:26 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 122ms (Views: 119.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:25:11 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 123ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:25:46 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 111ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:26:17 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:26:19 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 105ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:26:28 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 210ms (Views: 208.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:26:46 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 109ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:26:56 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 129ms (Views: 126.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:27:05 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 101ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:27:13 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 115ms (Views: 112.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:27:43 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:27:44 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 105ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departaments/new" for 127.0.0.1 at 2018-05-20 18:27:50 -0500
+Processing by DepartamentsController#new as HTML
+  Rendering departaments/new.html.erb within layouts/application
+  Rendered departaments/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 117ms (Views: 114.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:28:18 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  Rendered pqrs/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 149ms (Views: 120.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:35:01 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  Rendered pqrs/new.html.erb within layouts/application (56.0ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 12.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<Pqr:0x007fc2224f7018>
+Did you mean?  user=):
+    43: 
+    44:     <div class="input-field col s6 ">
+    45:       <%= f.label :username %><br/>
+    46:       <%= f.text_field :username, autofocus: true %>
+    47:     </div>
+    48:  </div>
+    49:  <div class="input-field col s6">
+  
+app/views/pqrs/new.html.erb:46:in `block in _app_views_pqrs_new_html_erb__1520379760169853959_70235888002560'
+app/views/pqrs/new.html.erb:9:in `_app_views_pqrs_new_html_erb__1520379760169853959_70235888002560'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 18:38:25 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  [1m[36mDepartament Load (0.5ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/devise/registrations/new.html.erb:57
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 115ms (Views: 113.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:41:33 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mDepartament Load (0.3ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/pqrs/new.html.erb:57
+  Rendered pqrs/new.html.erb within layouts/application (35.9ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `departament_id' for #<Pqr:0x007fc2217f5180>):
+    54:  <div class="row">
+    55: 
+    56:     <div class="input-field col s12">
+    57:     <%= f.select "departament_id", Departament.all.collect {|x| [x.name, x.id]},{}, class: "multiple"%>
+    58:     </div>
+    59: 
+    60:     <div class="input-field col s12 ">
+  
+app/views/pqrs/new.html.erb:57:in `block in _app_views_pqrs_new_html_erb__1520379760169853959_70235881184080'
+app/views/pqrs/new.html.erb:9:in `_app_views_pqrs_new_html_erb__1520379760169853959_70235881184080'
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:50:19 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:65
+  Rendered pqrs/new.html.erb within layouts/application (286.7ms)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x007fc221476a90>
+Did you mean?  name_2):
+    62:     </div>
+    63:  </div>    
+    64:  <div class="field col s12 validate">
+    65:  <%= f.select "state_id", User.all.collect {|x| [x.name, x.id]},{}, class: "multiple"%>
+    66:  </div>
+    67:     <div class="row">
+    68:       <div class="col s12">
+  
+app/views/pqrs/new.html.erb:65:in `block (2 levels) in _app_views_pqrs_new_html_erb__1520379760169853959_70235880803280'
+app/views/pqrs/new.html.erb:65:in `collect'
+app/views/pqrs/new.html.erb:65:in `block in _app_views_pqrs_new_html_erb__1520379760169853959_70235880803280'
+app/views/pqrs/new.html.erb:9:in `_app_views_pqrs_new_html_erb__1520379760169853959_70235880803280'
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:50:45 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:65
+  Rendered devise/shared/_links.html.erb (448.7ms)
+  Rendered pqrs/new.html.erb within layouts/application (516.9ms)
+Completed 500 Internal Server Error in 521ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `resource_name' for #<#<Class:0x007fc221ca99b0>:0x007fc221705090>
+Did you mean?  resolve_asset):
+    1: <%- if controller_name != 'sessions' %>
+    2:   <%= link_to "Log in", new_session_path(resource_name) %><br />
+    3: <% end -%>
+    4: 
+    5: <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  
+app/views/devise/shared/_links.html.erb:2:in `_app_views_devise_shared__links_html_erb__3815359957820543959_70235885765480'
+app/views/pqrs/new.html.erb:71:in `block in _app_views_pqrs_new_html_erb__1520379760169853959_70235880698000'
+app/views/pqrs/new.html.erb:9:in `_app_views_pqrs_new_html_erb__1520379760169853959_70235880698000'
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:52:11 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (1.7ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:65
+  Rendered pqrs/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 363ms (Views: 358.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 18:56:48 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 106ms (Views: 95.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 18:56:49 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 149ms (Views: 125.3ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/states" for 127.0.0.1 at 2018-05-20 18:57:06 -0500
+Processing by StatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qng8ROuE5CO9IFUIx3BFVuPkJjfJptoHLcZOESngOA0TmkHBAJfg4E6dF4ozl/0ed3D1g4KkkwO1oROJRpMscA==", "state"=>{"name"=>"Revisado", "description"=>"ESte proyecto esta revisado"}, "commit"=>"Create State"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:13
+  [1m[36mState Create (92.8ms)[0m  [1m[32mINSERT INTO "states" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Revisado"], ["description", "ESte proyecto esta revisado"], ["created_at", "2018-05-20 23:57:06.732659"], ["updated_at", "2018-05-20 23:57:06.732659"]]
+  ↳ app/controllers/states_controller.rb:13
+  [1m[35m (83.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:13
+Redirected to http://localhost:3000/states
+Completed 302 Found in 182ms (ActiveRecord: 176.5ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 18:57:06 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 106ms (Views: 104.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:57:10 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:65
+  Rendered pqrs/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 119ms (Views: 115.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/states/new" for 127.0.0.1 at 2018-05-20 18:57:24 -0500
+Processing by StatesController#new as HTML
+  Rendering states/new.html.erb within layouts/application
+  Rendered states/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/states" for 127.0.0.1 at 2018-05-20 18:57:37 -0500
+Processing by StatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hl2m4pNE6G7REOVGj6uRrDCiI2rOP0grf/4QTFsINnCnv9tneFfsrSKtp8R7TCnkpDbw3oU9AS/nmU3UNHsiDQ==", "state"=>{"name"=>"En revision", "description"=>"Todavia No"}, "commit"=>"Create State"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/states_controller.rb:13
+  [1m[36mState Create (0.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "En revision"], ["description", "Todavia No"], ["created_at", "2018-05-20 23:57:37.256580"], ["updated_at", "2018-05-20 23:57:37.256580"]]
+  ↳ app/controllers/states_controller.rb:13
+  [1m[35m (45.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/states_controller.rb:13
+Redirected to http://localhost:3000/states
+Completed 302 Found in 51ms (ActiveRecord: 45.8ms)
+
+
+Started GET "/states" for 127.0.0.1 at 2018-05-20 18:57:37 -0500
+Processing by StatesController#index as HTML
+  Rendering states/index.html.erb within layouts/application
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/states/index.html.erb:13
+  Rendered states/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 142ms (Views: 140.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:57:40 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:65
+  Rendered pqrs/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 141ms (Views: 135.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:59:02 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 170ms (Views: 166.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 18:59:56 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (1.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 200ms (Views: 192.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:00:21 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.7ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 133ms (Views: 129.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:00:37 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 121ms (Views: 117.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:00:50 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 133ms (Views: 129.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:01:30 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 115ms (Views: 112.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:03:09 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  Rendered pqrs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 95ms (Views: 93.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:04:40 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 121ms (Views: 119.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:05:50 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:18
+  [1m[36mState Load (0.9ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:64
+  Rendered pqrs/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 193ms (Views: 186.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:06:50 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:19
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:65
+  Rendered pqrs/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 134ms (Views: 130.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:10:07 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:19
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:66
+  Rendered pqrs/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 123ms (Views: 119.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:10:50 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:19
+  Rendered pqrs/new.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x007fc22084f348>
+Did you mean?  name_2):
+    16:  <div class="row">
+    17:       <div class="field col s12 validate">
+    18:       <%= f.label :Usuario %><br/>
+    19:       <%= f.select "user_id", User.all.collect {|x| [x.name, x.id]},{}, class: "multiple"%>
+    20:       </div>
+    21: 
+    22:       <div class="field col s6 validate">
+  
+app/views/pqrs/new.html.erb:19:in `block (2 levels) in _app_views_pqrs_new_html_erb__1520379760169853959_70235874714480'
+app/views/pqrs/new.html.erb:19:in `collect'
+app/views/pqrs/new.html.erb:19:in `block in _app_views_pqrs_new_html_erb__1520379760169853959_70235874714480'
+app/views/pqrs/new.html.erb:9:in `_app_views_pqrs_new_html_erb__1520379760169853959_70235874714480'
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:11:19 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:19
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:66
+  Rendered pqrs/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 128ms (Views: 125.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/pqrs" for 127.0.0.1 at 2018-05-20 19:11:58 -0500
+Processing by PqrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p75UfKxgY/DZwjKoyJOYr7XGxW0HSZ7zfa/iXRy6D0oeYM6VL6uYDKOET4t4c8kCdEhJ9NHeODwkcdeQGpPFzQ==", "pqr"=>{"user_id"=>"1", "name_1"=>"sdhs", "name_2"=>"biugd", "last_name_1"=>"isehfe", "last_name_2"=>"whhdw", "email"=>"iban@gkd.com", "number"=>"565675", "date"=>"2018-05-05", "description"=>"bdsfgufeuhfehfef fuefwgfe", "state_id"=>"5"}, "commit"=>"Create Pqr"}
+Unpermitted parameter: :description
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[36mPqr Create (17.9ms)[0m  [1m[32mINSERT INTO "pqrs" ("user_id", "name_1", "name_2", "last_name_1", "last_name_2", "email", "number", "date", "state_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["user_id", 1], ["name_1", "sdhs"], ["name_2", "biugd"], ["last_name_1", "isehfe"], ["last_name_2", "whhdw"], ["email", "iban@gkd.com"], ["number", "565675"], ["date", "2018-05-05"], ["state_id", 5], ["created_at", "2018-05-21 00:11:58.170110"], ["updated_at", "2018-05-21 00:11:58.170110"]]
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pqrs_controller.rb:13
+Redirected to http://localhost:3000/pqrs
+Completed 302 Found in 113ms (ActiveRecord: 59.9ms)
+
+
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:11:58 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  Rendered pqrs/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 144ms (Views: 142.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pqrs/1/edit" for 127.0.0.1 at 2018-05-20 19:20:17 -0500
+Processing by PqrsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPqr Load (1.1ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:21
+Completed 406 Not Acceptable in 90ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionController::UnknownFormat (PqrsController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:20:20 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  Rendered pqrs/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 122ms (Views: 117.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:21:33 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:19
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:66
+  Rendered pqrs/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 147ms (Views: 143.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-05-20 19:21:56 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT  "departaments".* FROM "departaments" WHERE "departaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:25
+  [1m[36mDepartament Load (0.2ms)[0m  [1m[34mSELECT  "departaments".* FROM "departaments" WHERE "departaments"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:25
+  [1m[36mDepartament Load (0.3ms)[0m  [1m[34mSELECT  "departaments".* FROM "departaments" WHERE "departaments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:25
+  Rendered users/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 130ms (Views: 112.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:22:47 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:19
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:66
+  Rendered pqrs/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 125ms (Views: 121.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/pqrs" for 127.0.0.1 at 2018-05-20 19:22:54 -0500
+Processing by PqrsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDdH2h3t92g/cuzIZPdj7KA5rx2FbnRr0MgAnRe1VNox6d0zniYMlEU0kevUFzJBYbcjhFP50qSJFjVQEZyeXQ==", "pqr"=>{"user_id"=>"1", "name_1"=>"", "name_2"=>"", "last_name_1"=>"", "last_name_2"=>"", "email"=>"", "number"=>"", "date"=>"", "description"=>"nsnns", "state_id"=>"4"}, "commit"=>"Create Pqr"}
+Unpermitted parameter: :description
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[36mPqr Create (1.6ms)[0m  [1m[32mINSERT INTO "pqrs" ("user_id", "name_1", "name_2", "last_name_1", "last_name_2", "email", "number", "state_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["user_id", 1], ["name_1", ""], ["name_2", ""], ["last_name_1", ""], ["last_name_2", ""], ["email", ""], ["number", ""], ["state_id", 4], ["created_at", "2018-05-21 00:22:54.795018"], ["updated_at", "2018-05-21 00:22:54.795018"]]
+  ↳ app/controllers/pqrs_controller.rb:13
+  [1m[35m (32.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pqrs_controller.rb:13
+Redirected to http://localhost:3000/pqrs
+Completed 302 Found in 47ms (ActiveRecord: 34.9ms)
+
+
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:22:54 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.5ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  Rendered pqrs/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 203ms (Views: 199.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:44:53 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (1.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  Rendered pqrs/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 145ms (Views: 139.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/pqrs/1/edit" for 127.0.0.1 at 2018-05-20 19:44:55 -0500
+Processing by PqrsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:21
+  Rendering pqrs/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/edit.html.erb:19
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/edit.html.erb:66
+  Rendered pqrs/edit.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 146ms (Views: 138.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pqrs/new" for 127.0.0.1 at 2018-05-20 19:45:10 -0500
+Processing by PqrsController#new as HTML
+  Rendering pqrs/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/new.html.erb:19
+  [1m[36mState Load (0.6ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/new.html.erb:66
+  Rendered pqrs/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 124ms (Views: 119.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pqrs/1/edit" for 127.0.0.1 at 2018-05-20 19:45:20 -0500
+Processing by PqrsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPqr Load (0.8ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:21
+  Rendering pqrs/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pqrs/edit.html.erb:19
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
+  ↳ app/views/pqrs/edit.html.erb:66
+  Rendered pqrs/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 109ms (Views: 103.9ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/pqrs/1" for 127.0.0.1 at 2018-05-20 19:45:35 -0500
+Processing by PqrsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wNLTATcUJZ09mFErxdysydQ63ab3wVfQZ9rWku1CZIF5DEnotN/eYUfeLAh1PP1kFbRRPyFW8R8+BONf62uuBg==", "pqr"=>{"user_id"=>"1", "name_1"=>"sdhs", "name_2"=>"biugd", "last_name_1"=>"isehfe", "last_name_2"=>"whhdw", "email"=>"iban@gkd.com", "number"=>"565675", "date"=>"2018-05-05", "description"=>"jhgghghghgh", "state_id"=>"4"}, "commit"=>"Update Pqr", "id"=>"1"}
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:25
+Unpermitted parameter: :description
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pqrs_controller.rb:26
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:26
+  [1m[36mState Load (0.3ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:26
+  [1m[36mPqr Update (1.0ms)[0m  [1m[33mUPDATE "pqrs" SET "state_id" = $1, "updated_at" = $2 WHERE "pqrs"."id" = $3[0m  [["state_id", 4], ["updated_at", "2018-05-21 00:45:35.943528"], ["id", 1]]
+  ↳ app/controllers/pqrs_controller.rb:26
+  [1m[35m (37.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pqrs_controller.rb:26
+Redirected to http://localhost:3000/pqrs
+Completed 302 Found in 114ms (ActiveRecord: 40.1ms)
+
+
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:45:36 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (0.7ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (1.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  Rendered pqrs/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 133ms (Views: 128.6ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/pqrs/2" for 127.0.0.1 at 2018-05-20 19:45:43 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for PqrsController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:46:07 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mCACHE State Load (0.0ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  Rendered pqrs/index.html.erb within layouts/application (90.6ms)
+Completed 200 OK in 241ms (Views: 186.4ms | ActiveRecord: 20.0ms)
+
+
+Started DELETE "/pqrs/2" for 127.0.0.1 at 2018-05-20 19:46:10 -0500
+Processing by PqrsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c1MgKBOtY/R97pY4dwjmHbD4wZufOQgEyryERpcEQovKjbrBkGaYCAeo6xvH6LewcXZNAkmursuTYrGLkS2IDA==", "id"=>"2"}
+  [1m[36mPqr Load (1.0ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pqrs_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pqrs_controller.rb:35
+  [1m[36mPqr Destroy (61.8ms)[0m  [1m[31mDELETE FROM "pqrs" WHERE "pqrs"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/pqrs_controller.rb:35
+  [1m[35m (23.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pqrs_controller.rb:35
+Redirected to http://localhost:3000/pqrs
+Completed 302 Found in 96ms (ActiveRecord: 86.5ms)
+
+
+Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 19:46:10 -0500
+Processing by PqrsController#index as HTML
+  Rendering pqrs/index.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/pqrs/index.html.erb:21
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:26
+  [1m[36mState Load (0.4ms)[0m  [1m[34mSELECT  "states".* FROM "states" WHERE "states"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pqrs/index.html.erb:35
+  Rendered pqrs/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 249ms (Views: 244.4ms | ActiveRecord: 1.4ms)
+>>>>>>> b1773d033cdd5e76a79fce953d8989867307b47f
 
 

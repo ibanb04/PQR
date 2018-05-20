@@ -1,0 +1,43 @@
+<h1>Listado de PQR</h1>
+<table class="striped">
+    <tr>
+        
+        <thead>
+            <th>Id</th>
+            <th>Usuario</th>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Fecha</th>
+            <th>Descripcion</th>
+            <th>Estado</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </thead>
+    </tr>
+    <% @pqrs.each do |pqr| %>
+    <tr>
+    
+        
+        <td><%= pqr.id %></td>
+        <td><%= pqr.user.username %></td>
+        <td><%= pqr.name_1 %></td>
+        <td><%= pqr.name_2 %></td>
+        <td><%= pqr.last_name_1 %></td>
+        <td><%= pqr.last_name_2 %></td>
+        <td><%= pqr.email %></td>
+        <td><%= pqr.number %></td>
+        <td><%= pqr.date %></td>
+        <td><%= pqr.description %></td>
+        <td><%= pqr.state.name %></td>
+        <td> <%= link_to "Editar", edit_pqr_path(pqr) ,class: 'waves-effect waves-light btn green'%></td>
+        <td>
+            <%= link_to "Eliminar", pqr, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+        </td>
+    </tr>
+        <% end %>
+    <%= link_to "Nuevo", new_pqr_path ,class: 'waves-effect waves-light btn blue'%>
+</table>
