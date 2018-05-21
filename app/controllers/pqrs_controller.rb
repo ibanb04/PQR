@@ -1,4 +1,5 @@
 class PqrsController < ApplicationController
+    before_action :set_pqr, only: [:edit, :update, :destroy]
 
     def index
     @pqrs = Pqr.all
@@ -18,11 +19,9 @@ class PqrsController < ApplicationController
     end
 
     def edit
-        @pqr = Pqr.find(params[:id])
     end
 
     def update
-        @pqr = Pqr.find(params[:id])
         if @pqr.update(pqr_params)
             redirect_to pqrs_path
         else
@@ -31,7 +30,6 @@ class PqrsController < ApplicationController
     end
 
     def destroy
-        @pqr = Pqr.find(params[:id])
         @pqr.destroy
         redirect_to pqrs_path
     end
@@ -40,4 +38,8 @@ class PqrsController < ApplicationController
         def pqr_params
         params.require(:pqr).permit(:user_id, :name_1, :name_2, :last_name_1, :last_name_2, :email, :number, :date, :description, :state_id)
         end
+
+    def set_pqr
+        @pqr = Pqr.find(params[:id])
+    end
 end
