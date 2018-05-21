@@ -38,6 +38,6 @@ class PqrsController < ApplicationController
 
     private
         def pqr_params
-        params.require(:pqr).permit(:user_id, :name_1, :name_2, :last_name_1, :last_name_2, :email, :number, :date, :descripcion, :state_id)
+        params.require(:pqr).permit(:user_id, :name_1, :name_2, :last_name_1, :last_name_2, :email, :number, :date, :description, :state_id)
         end
 end
