@@ -1,4 +1,5 @@
 class StatesController < ApplicationController
+    before_action :set_state, only: [:edit, :update, :destroy]
 
     def index
     @states = State.all
@@ -18,11 +19,9 @@ class StatesController < ApplicationController
     end
 
     def edit
-        @state = State.find params[:id]
     end
 
     def update
-        @state = State.find params[:id]
         if @state.update state_params
             redirect_to states_path
         else
@@ -31,7 +30,6 @@ class StatesController < ApplicationController
     end
 
     def destroy
-    @state = State.find(params[:id])
     @state.destroy
     redirect_to states_path
     end
@@ -39,6 +37,10 @@ class StatesController < ApplicationController
     private
     def state_params
     params.require(:state).permit(:name, :description)
+    end
+
+    def set_state
+        @state = State.find(params[:id])
     end
 
 end
