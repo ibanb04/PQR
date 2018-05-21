@@ -11,16 +11,18 @@
 
   <body>
       
-      <nav>
-        <div class="nav-wrapper blue">
-            <ul id="nav-mobile" class="left hide-on-med-and-down right">
-            <% if user_signed_in? %>
-            <li>
-              <%= link_to "Salir", destroy_user_session_path, method: :delete %>
-            </li>
-            <% end %>
-            </ul>
-        </div>
+      
+        
+          <% if user_signed_in? %>
+          <nav>
+            <div class="nav-wrapper blue">
+              <ul id="nav-mobile" class="left hide-on-med-and-down right">
+              <li>
+                <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+              </li>
+          <% end %>
+              </ul>
+            </div>
       
       </nav>
 
