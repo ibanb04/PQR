@@ -10321,6 +10321,132 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 217ms (Views: 215.1ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2018-05-20 17:00:50 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/authenticatable.rb:238
+Completed 200 OK in 4001ms (Views: 3986.0ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-20 17:00:57 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5mylj21gKkqTff4hN/IKqMcJOXdmzc6BBzzcO6xmgBgj2CG6xUCZm45mCxQS6oo60vEc0SR9Q5+7XNzR5Z9xVA=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/authenticatable.rb:238
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 17:00:57 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 93ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-20 17:01:06 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  [1m[36mDepartament Load (0.4ms)[0m  [1m[34mSELECT "departaments".* FROM "departaments"[0m
+  ↳ app/views/devise/registrations/new.html.erb:57
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 90ms (Views: 85.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-20 17:01:20 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-20 17:01:47 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tB2n405F9wpjCxcl6WTd0lk+xmdhXXbQGTjRjzAyng0CPQK0+HbWX04LDlpuYYOY9c0hyr8O+cCrWzngqdXXA==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/authenticatable.rb:276
+Completed 401 Unauthorized in 218ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tB2n405F9wpjCxcl6WTd0lk+xmdhXXbQGTjRjzAyng0CPQK0+HbWX04LDlpuYYOY9c0hyr8O+cCrWzngqdXXA==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 219ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-20 17:01:53 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fPP3dGeYQaus5PDgKCx6C7oWCK5cfPj0mvKmlydjvp8p1n4BDJlvfLu93v91I4D2zBZOxXBzpG+T8sMTZBuJ+g==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/authenticatable.rb:276
+Completed 401 Unauthorized in 158ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fPP3dGeYQaus5PDgKCx6C7oWCK5cfPj0mvKmlydjvp8p1n4BDJlvfLu93v91I4D2zBZOxXBzpG+T8sMTZBuJ+g==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 219ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-20 17:01:57 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Stlk8+a7Wa95w1JLwAX3+lLOEYNmxsfD5jiOHlQgdkMf/O2Gjbp3eG6afFSdCg0HJM5X6ErJm1jvOOuaF1hBJg==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/authenticatable.rb:276
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 17:01:58 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/authenticatable.rb:238
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-05-20 17:02:00 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+4cOsb3w+H19yWBvGOht71O6CXPhUFanTHSg3hyOtEXwTI7eCo9yJFTsUVGEuj3VyuCo2rkgbDPlTuldPrBu0Q=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/authenticatable.rb:238
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/ivankeys/.rvm/gems/ruby-2.4.1/bundler/gems/devise-31aceeb10429/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 17:02:00 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-20 17:16:21 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+=======
 Started GET "/departaments" for 127.0.0.1 at 2018-05-20 18:04:57 -0500
 Processing by DepartamentsController#index as HTML
   Rendering departaments/index.html.erb within layouts/application
@@ -11287,6 +11413,7 @@ Processing by PqrsController#index as HTML
   ↳ app/views/pqrs/index.html.erb:35
   Rendered pqrs/index.html.erb within layouts/application (12.4ms)
 Completed 200 OK in 249ms (Views: 244.4ms | ActiveRecord: 1.4ms)
+>>>>>>> b1773d033cdd5e76a79fce953d8989867307b47f
 
 
 Started GET "/pqrs" for 127.0.0.1 at 2018-05-20 22:04:56 -0500
