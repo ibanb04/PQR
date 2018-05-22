@@ -1,4 +1,5 @@
 class DepartamentsController < ApplicationController
+    before_action :set_departament, only: [:edit, :update, :delete]
     def index
     @departaments = Departament.all
     end
@@ -17,11 +18,9 @@ class DepartamentsController < ApplicationController
     end
 
     def edit
-        @departament = Departament.find(params[:id])
     end
 
     def update
-        @departament = Departament.find(params[:id])
         if @departament.update(departament_params)
             redirect_to departaments_path
         else
@@ -30,7 +29,6 @@ class DepartamentsController < ApplicationController
     end
 
     def delete
-        @departament = Departament.find(params[:id])
         @departament.destroy
         redirect_to departaments_path
     end
@@ -39,5 +37,9 @@ class DepartamentsController < ApplicationController
         def departament_params
         params.require(:departament).permit(:name, :description)
         end
+
+    def set_departament
+        @departament = Departament.find(params[:id])
+    end
 
 end
