@@ -1,0 +1,33 @@
+<h1>Listado de Lista de PQR Revisados</h1>
+<table class="striped">
+    <tr>
+        
+        <thead>
+            <th>Id</th>
+            <th>Pqr Id</th>
+            <th>Usuario</th>
+            <th>Comentario</th>
+            <th>Fecha</th>
+            <th>Terminado</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </thead>
+    </tr>
+    <% @reviews.each do |review| %>
+    <tr>
+    
+        
+        <td><%= review.id %></td>
+        <td><%= review.pqr.id %></td>
+        <td><%= review.user.id %></td>
+        <td><%= review.comment %></td>
+        <td><%= review.date %></td>
+        <td><%= review.finished %></td>
+        <td> <%= link_to "Editar", edit_review_path(review) ,class: 'waves-effect waves-light btn green'%></td>
+        <td>
+            <%= link_to "Eliminar", review, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+        </td>
+    </tr>
+        <% end %>
+    <%= link_to "Nuevo", new_review_path ,class: 'waves-effect waves-light btn blue backup' %>
+</table>
