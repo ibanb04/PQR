@@ -11614,3 +11614,624 @@ Completed 200 OK in 128ms (Views: 124.3ms | ActiveRecord: 2.7ms)
 >>>>>>> eefff98db6df36dd7185b41d2f6955f9e39a46eb
 
 
+Started GET "/reviews" for 127.0.0.1 at 2018-05-24 01:03:02 -0500
+  [1m[35m (26.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jesusramosv/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (83.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:16
+  [1m[36mPqr Load (42.6ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:21
+  [1m[36mUser Load (23.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:22
+  Rendered reviews/index.html.erb within layouts/application (304.1ms)
+Completed 200 OK in 2380ms (Views: 2141.3ms | ActiveRecord: 167.1ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2018-05-24 01:03:12 -0500
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/reviews/new.html.erb:19
+  [1m[36mPqr Load (0.7ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/reviews/new.html.erb:24
+  Rendered reviews/new.html.erb within layouts/application (225.8ms)
+Completed 200 OK in 340ms (Views: 335.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2018-05-24 01:03:14 -0500
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/reviews/new.html.erb:19
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/reviews/new.html.erb:24
+  Rendered reviews/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 117ms (Views: 114.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2018-05-24 01:03:32 -0500
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jurQhQTqAO4hACR5y0o/tuctbDVISxg1+6I/D3o03AZeGPtfJnNnPBkJNwj91d7qtnIDLKfZNBU9S2RVm9zqBA==", "review"=>{"user_id"=>"3", "pqr_id"=>"1", "comment"=>"jhahjhhjzjhhx", "date"=>"2018-05-18", "finished"=>"aja"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:14
+  [1m[36mPqr Load (0.3ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:14
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:14
+  [1m[36mReview Create (38.9ms)[0m  [1m[32mINSERT INTO "reviews" ("pqr_id", "user_id", "comment", "date", "finished", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["pqr_id", 1], ["user_id", 3], ["comment", "jhahjhhjzjhhx"], ["date", "2018-05-18"], ["finished", "aja"], ["created_at", "2018-05-24 06:03:32.597118"], ["updated_at", "2018-05-24 06:03:32.597118"]]
+  ↳ app/controllers/reviews_controller.rb:14
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:14
+Redirected to http://localhost:3000/reviews
+Completed 302 Found in 73ms (ActiveRecord: 63.8ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2018-05-24 01:03:32 -0500
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:16
+  [1m[36mPqr Load (0.3ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:22
+  [1m[36mCACHE Pqr Load (0.0ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:22
+  Rendered reviews/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 124ms (Views: 121.7ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/reviews/2" for 127.0.0.1 at 2018-05-24 01:04:33 -0500
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sI11vWHmbNqkDBb1+A1iVElWFwnalFaT+ywMhjRl2KBgf15nQ38LCJwFBYTOkoMIGAl4EDUGerM9xVfc1Y3uog==", "id"=>"2"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reviews_controller.rb:33
+  [1m[36mReview Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/reviews_controller.rb:33
+  [1m[35m (57.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reviews_controller.rb:33
+Redirected to http://localhost:3000/reviews
+Completed 302 Found in 65ms (ActiveRecord: 58.4ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2018-05-24 01:04:33 -0500
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:16
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:21
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/reviews/index.html.erb:22
+  Rendered reviews/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 139ms (Views: 135.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:18:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/notifications"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:19:14 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (1.0ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:14
+  Rendered notifications/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 6413ms (Views: 6389.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:19:24 -0500
+Processing by NotificationsController#new as HTML
+Completed 406 Not Acceptable in 84ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionController::UnknownFormat (NotificationsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:23:27 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.3ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:14
+  Rendered notifications/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 155ms (Views: 152.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:23:29 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:11
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:16
+  Rendered notifications/new.html.erb within layouts/application (115.9ms)
+Completed 200 OK in 223ms (Views: 208.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:23:32 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:11
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:16
+  Rendered notifications/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 114ms (Views: 111.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:24:30 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:17
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:22
+  Rendered notifications/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 119ms (Views: 115.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:25:25 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (1.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:17
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:22
+  Rendered notifications/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 110ms (Views: 105.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:25:48 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:17
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:22
+  Rendered notifications/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 122ms (Views: 120.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/notifications" for 127.0.0.1 at 2018-05-24 01:26:14 -0500
+Processing by NotificationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4SR3zW3/An/VCygRhxC32wR8+aY2j7wRpwVbYxFhml8x1lwXT2Zlre0CO2Cxj1aHVSOWv9kdkDFh7AA58ImsXQ==", "notification"=>{"message"=>"Le llegó la notificacion", "pqr_id"=>"1", "user_id"=>"3"}, "commit"=>"Crear"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[36mNotification Create (39.2ms)[0m  [1m[32mINSERT INTO "notifications" ("message", "pqr_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "Le llegó la notificacion"], ["pqr_id", 1], ["user_id", 3], ["created_at", "2018-05-24 06:26:14.228379"], ["updated_at", "2018-05-24 06:26:14.228379"]]
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[35m (53.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notifications_controller.rb:15
+Redirected to http://localhost:3000/notifications
+Completed 302 Found in 113ms (ActiveRecord: 96.9ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:26:14 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:14
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:20
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:21
+  Rendered notifications/index.html.erb within layouts/application (500.6ms)
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `state' for #<#<Class:0x007fe2bcf08088>:0x007fe2c8158238>
+Did you mean?  state_url):
+    21:         <td><%= notification.user.id %></td>
+    22:         <td> <%= link_to "Editar", edit_notification_path(notification) ,class: 'waves-effect waves-light btn green'%></td>
+    23:         <td>
+    24:             <%= link_to "Eliminar", state, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+    25:         </td>
+    26:     </tr>
+    27:         <% end %>
+  
+app/views/notifications/index.html.erb:24:in `block in _app_views_notifications_index_html_erb__1102283543749333604_70305998095920'
+app/views/notifications/index.html.erb:14:in `_app_views_notifications_index_html_erb__1102283543749333604_70305998095920'
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:26:35 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.7ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:14
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:20
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:21
+  Rendered notifications/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 124ms (Views: 119.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/notifications/1" for 127.0.0.1 at 2018-05-24 01:26:50 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for NotificationsController):
+  
+actionpack (5.2.0) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/notifications/1" for 127.0.0.1 at 2018-05-24 01:27:09 -0500
+Processing by NotificationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mrIMyog1poAawnNJkPnckX+80VufixiJUb37x8ieotpKQCcQqqzBUiLLYDimZj3NLuO+QnAZNKmXVKCdKXaU2A==", "id"=>"1"}
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT  "notifications".* FROM "notifications" WHERE "notifications"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notifications_controller.rb:34
+  [1m[36mNotification Destroy (0.5ms)[0m  [1m[31mDELETE FROM "notifications" WHERE "notifications"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/notifications_controller.rb:34
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notifications_controller.rb:34
+Redirected to http://localhost:3000/notifications
+Completed 302 Found in 47ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:27:10 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.9ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:14
+  Rendered notifications/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:27:21 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:17
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:22
+  Rendered notifications/new.html.erb within layouts/application (96.7ms)
+Completed 200 OK in 246ms (Views: 229.8ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:27:25 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:17
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:22
+  Rendered notifications/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/notifications" for 127.0.0.1 at 2018-05-24 01:27:35 -0500
+Processing by NotificationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pjR9MxoM86aCCaQbEe8p1km5RtAPpCrpSO7hCdbI/Ax2xlbpOJWUdLoAt2oncMiKGOYpyeA2BsmOB7pTNyDKDg==", "notification"=>{"message"=>"udddjjd", "pqr_id"=>"3", "user_id"=>"1"}, "commit"=>"Crear"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[36mNotification Create (1.1ms)[0m  [1m[32mINSERT INTO "notifications" ("message", "pqr_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "udddjjd"], ["pqr_id", 3], ["user_id", 1], ["created_at", "2018-05-24 06:27:35.138469"], ["updated_at", "2018-05-24 06:27:35.138469"]]
+  ↳ app/controllers/notifications_controller.rb:15
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notifications_controller.rb:15
+Redirected to http://localhost:3000/notifications
+Completed 302 Found in 45ms (ActiveRecord: 30.3ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:27:35 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.7ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:14
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:20
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:21
+  Rendered notifications/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 132ms (Views: 128.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/notifications/2/edit" for 127.0.0.1 at 2018-05-24 01:27:36 -0500
+Processing by NotificationsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNotification Load (0.4ms)[0m  [1m[34mSELECT  "notifications".* FROM "notifications" WHERE "notifications"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:44
+Completed 406 Not Acceptable in 54ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::UnknownFormat (NotificationsController#edit is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.0) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/notifications/2/edit" for 127.0.0.1 at 2018-05-24 01:29:05 -0500
+Processing by NotificationsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT  "notifications".* FROM "notifications" WHERE "notifications"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:44
+  Rendering notifications/edit.html.erb within layouts/application
+  [1m[36mPqr Load (0.8ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/edit.html.erb:17
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/edit.html.erb:22
+  Rendered notifications/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 117ms (Views: 113.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/notifications/2/edit" for 127.0.0.1 at 2018-05-24 01:29:11 -0500
+Processing by NotificationsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNotification Load (0.6ms)[0m  [1m[34mSELECT  "notifications".* FROM "notifications" WHERE "notifications"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:44
+  Rendering notifications/edit.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/edit.html.erb:17
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/edit.html.erb:22
+  Rendered notifications/edit.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 134ms (Views: 129.5ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/notifications/2" for 127.0.0.1 at 2018-05-24 01:29:16 -0500
+Processing by NotificationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iodLQ/RBaYPQtvnqnnyQnGksGmsnYd0BXvF4UIzOnZZadWCZ1tgOUei/6puo43HAOHN1csjz8SGYGCMKbSarlA==", "notification"=>{"message"=>"udddjjdyujuuuu", "pqr_id"=>"3", "user_id"=>"1"}, "commit"=>"Crear", "id"=>"2"}
+  [1m[36mNotification Load (1.3ms)[0m  [1m[34mSELECT  "notifications".* FROM "notifications" WHERE "notifications"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notifications_controller.rb:26
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:26
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/notifications_controller.rb:26
+  [1m[36mNotification Update (0.7ms)[0m  [1m[33mUPDATE "notifications" SET "message" = $1, "updated_at" = $2 WHERE "notifications"."id" = $3[0m  [["message", "udddjjdyujuuuu"], ["updated_at", "2018-05-24 06:29:16.974151"], ["id", 2]]
+  ↳ app/controllers/notifications_controller.rb:26
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notifications_controller.rb:26
+Redirected to http://localhost:3000/notifications
+Completed 302 Found in 46ms (ActiveRecord: 35.7ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:29:17 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.6ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:14
+  [1m[36mPqr Load (0.3ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:21
+  Rendered notifications/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 117ms (Views: 112.2ms | ActiveRecord: 1.2ms)
+
+

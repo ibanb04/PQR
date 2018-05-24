@@ -1,0 +1,29 @@
+<h1>Listado de Notificaciones</h1>
+<table class="striped">
+    <tr>
+        
+        <thead>
+            <th>Id</th>
+            <th>Mensaje</th>
+            <th>PQR</th>
+            <th>Usuario</th>
+            
+            
+        </thead>
+    </tr>
+    <% @notifications.each do |notification| %>
+    <tr>
+    
+        
+        <td><%= notification.id %></td>
+        <td><%= notification.message %></td>
+        <td><%= notification.pqr.id %></td>
+        <td><%= notification.user.id %></td>
+        <td> <%= link_to "Editar", edit_notification_path(notification) ,class: 'waves-effect waves-light btn green'%></td>
+        <td>
+            <%= link_to "Eliminar", notification, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+        </td>
+    </tr>
+        <% end %>
+        <%= link_to "Nuevo", new_notification_path ,class: 'waves-effect waves-light btn blue'%>
+</table>
