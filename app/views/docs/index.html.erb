@@ -1,0 +1,30 @@
+<h1>Listado de Documentos</h1>
+<table class="striped">
+    <tr>
+        
+        <thead>
+            <th>Id</th>
+            <th>PQR</th>
+            <th>Nombre</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+           
+            
+            
+        </thead>
+    </tr>
+    <% @docs.each do |doc| %>
+    <tr>
+    
+        
+        <td><%= doc.id %></td>
+        <td><%= doc.pqr.id %></td>
+        <td><%= doc.name %></td>
+        <td> <%= link_to "Editar", edit_doc_path(doc) ,class: 'waves-effect waves-light btn green'%></td>
+        <td>
+            <%= link_to "Eliminar", doc, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+        </td>
+    </tr>
+        <% end %>
+        <%= link_to "Nuevo", new_doc_path ,class: 'waves-effect waves-light btn blue'%>
+</table>

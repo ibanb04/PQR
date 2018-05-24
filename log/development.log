@@ -12235,3 +12235,353 @@ Processing by NotificationsController#index as HTML
 Completed 200 OK in 117ms (Views: 112.2ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:38:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/docs"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:38:43 -0500
+  
+SyntaxError (/home/jesusramosv/ProyectosRuby/PQR/app/controllers/docs_controller.rb:41: syntax error, unexpected keyword_end, expecting ')'
+        end
+           ^
+/home/jesusramosv/ProyectosRuby/PQR/app/controllers/docs_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/docs_controller.rb:41: syntax error, unexpected keyword_end, expecting ')'
+app/controllers/docs_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:39:10 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.6ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  Rendered docs/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 4193ms (Views: 4152.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:42:35 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.6ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  Rendered docs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 162ms (Views: 158.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/docs/new" for 127.0.0.1 at 2018-05-24 01:42:36 -0500
+Processing by DocsController#new as HTML
+  Rendering docs/new.html.erb within layouts/application
+  Rendered docs/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 11.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     6:     
+     7:     <div class="card hoverable" style="background-color: rgba(255,255,255,.15);" id="card-login">
+     8: 
+     9:     <%= form_for @user do |f| %>
+    10: 
+    11:         <div class="field col s12 validate">
+    12:             <%= f.label :PQR %><br/>
+  
+app/views/docs/new.html.erb:9:in `_app_views_docs_new_html_erb___2587542040226286444_70305839416780'
+Started GET "/docs/new" for 127.0.0.1 at 2018-05-24 01:42:50 -0500
+Processing by DocsController#new as HTML
+  Rendering docs/new.html.erb within layouts/application
+  [1m[36mPqr Load (1.3ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/new.html.erb:13
+  Rendered docs/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 183ms (Views: 174.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/docs/new" for 127.0.0.1 at 2018-05-24 01:42:53 -0500
+Processing by DocsController#new as HTML
+  Rendering docs/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.7ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/new.html.erb:13
+  Rendered docs/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 125ms (Views: 122.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/docs/new" for 127.0.0.1 at 2018-05-24 01:44:18 -0500
+Processing by DocsController#new as HTML
+  Rendering docs/new.html.erb within layouts/application
+  [1m[36mPqr Load (1.4ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/new.html.erb:13
+  Rendered docs/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 139ms (Views: 134.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/docs" for 127.0.0.1 at 2018-05-24 01:44:23 -0500
+Processing by DocsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VHO2jX4/O6HcLkdogrVoxuYBxTppeixpXz16qpesri+EgZ1XXKZcc+QnVBm0Komat16qI4boAEmZ1CHwdkSYLQ==", "doc"=>{"pqr_id"=>"3", "name"=>"jdkjdkjd"}, "commit"=>"Crear"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/docs_controller.rb:15
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:15
+  [1m[36mDoc Create (30.3ms)[0m  [1m[32mINSERT INTO "docs" ("pqr_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pqr_id", 3], ["name", "jdkjdkjd"], ["created_at", "2018-05-24 06:44:23.179570"], ["updated_at", "2018-05-24 06:44:23.179570"]]
+  ↳ app/controllers/docs_controller.rb:15
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/docs_controller.rb:15
+Redirected to http://localhost:3000/docs
+Completed 302 Found in 77ms (ActiveRecord: 62.4ms)
+
+
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:44:23 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.3ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  [1m[36mPqr Load (0.3ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/docs/index.html.erb:19
+  Rendered docs/index.html.erb within layouts/application (455.5ms)
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `notification' for #<#<Class:0x007fe2cc5a9c48>:0x007fe2b54ee608>
+Did you mean?  notification_url):
+    18:         <td><%= doc.id %></td>
+    19:         <td><%= doc.pqr.id %></td>
+    20:         <td><%= doc.name %></td>
+    21:         <td> <%= link_to "Editar", edit_doc_path(notification) ,class: 'waves-effect waves-light btn green'%></td>
+    22:         <td>
+    23:             <%= link_to "Eliminar", doc, class: 'waves-effect waves-light btn red', method: :delete, data: {confirm: "¿Deseas eliminar este departamento?" }%>      
+    24:         </td>
+  
+app/views/docs/index.html.erb:21:in `block in _app_views_docs_index_html_erb___413294268688203962_70305840592880'
+app/views/docs/index.html.erb:14:in `_app_views_docs_index_html_erb___413294268688203962_70305840592880'
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:44:50 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.3ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/docs/index.html.erb:19
+  Rendered docs/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 116ms (Views: 113.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/docs/1" for 127.0.0.1 at 2018-05-24 01:45:12 -0500
+Processing by DocsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2kwX3VMnfPnE//xFHdIMv/a+yDeiwSl/i5ZupX5/f80KvjwHcb4bK/z27zQrTe3jp+GnLk1TBV9NfzX/n5dJzw==", "id"=>"1"}
+  [1m[36mDoc Load (0.4ms)[0m  [1m[34mSELECT  "docs".* FROM "docs" WHERE "docs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/docs_controller.rb:34
+  [1m[36mDoc Destroy (0.8ms)[0m  [1m[31mDELETE FROM "docs" WHERE "docs"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/docs_controller.rb:34
+  [1m[35m (30.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/docs_controller.rb:34
+Redirected to http://localhost:3000/docs
+Completed 302 Found in 40ms (ActiveRecord: 31.7ms)
+
+
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:45:12 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.4ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  Rendered docs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 140ms (Views: 138.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:46:22 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.4ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  Rendered docs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 121ms (Views: 118.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/docs/new" for 127.0.0.1 at 2018-05-24 01:46:24 -0500
+Processing by DocsController#new as HTML
+  Rendering docs/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.7ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/new.html.erb:13
+  Rendered docs/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/docs/new" for 127.0.0.1 at 2018-05-24 01:46:28 -0500
+Processing by DocsController#new as HTML
+  Rendering docs/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.8ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/new.html.erb:13
+  Rendered docs/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 113ms (Views: 110.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/docs/new" for 127.0.0.1 at 2018-05-24 01:47:08 -0500
+Processing by DocsController#new as HTML
+  Rendering docs/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/new.html.erb:13
+  Rendered docs/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 132ms (Views: 129.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/docs" for 127.0.0.1 at 2018-05-24 01:47:19 -0500
+Processing by DocsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5vNz6MTwfKuQXTQawubDVpEC6VfxbEPOWBp8zxmcqSI2AVgy5mkbeahUJ2v0eSIKwF2GTh7+b+6e8yeV+HSfIA==", "doc"=>{"pqr_id"=>"1", "name"=>"jhgkjjbjb"}, "commit"=>"Crear"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/docs_controller.rb:15
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:15
+  [1m[36mDoc Create (0.7ms)[0m  [1m[32mINSERT INTO "docs" ("pqr_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["pqr_id", 1], ["name", "jhgkjjbjb"], ["created_at", "2018-05-24 06:47:19.688235"], ["updated_at", "2018-05-24 06:47:19.688235"]]
+  ↳ app/controllers/docs_controller.rb:15
+  [1m[35m (43.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/docs_controller.rb:15
+Redirected to http://localhost:3000/docs
+Completed 302 Found in 51ms (ActiveRecord: 44.3ms)
+
+
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:47:19 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.4ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/docs/index.html.erb:19
+  Rendered docs/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 127ms (Views: 124.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/docs/2/edit" for 127.0.0.1 at 2018-05-24 01:47:21 -0500
+Processing by DocsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDoc Load (0.5ms)[0m  [1m[34mSELECT  "docs".* FROM "docs" WHERE "docs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:44
+  Rendering docs/edit.html.erb within layouts/application
+  [1m[36mPqr Load (2.2ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/edit.html.erb:13
+  Rendered docs/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 138ms (Views: 131.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/docs/2/edit" for 127.0.0.1 at 2018-05-24 01:47:26 -0500
+Processing by DocsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDoc Load (0.4ms)[0m  [1m[34mSELECT  "docs".* FROM "docs" WHERE "docs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:44
+  Rendering docs/edit.html.erb within layouts/application
+  [1m[36mPqr Load (0.6ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/edit.html.erb:13
+  Rendered docs/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 113ms (Views: 109.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/docs/2/edit" for 127.0.0.1 at 2018-05-24 01:47:34 -0500
+Processing by DocsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDoc Load (0.6ms)[0m  [1m[34mSELECT  "docs".* FROM "docs" WHERE "docs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:44
+  Rendering docs/edit.html.erb within layouts/application
+  [1m[36mPqr Load (0.5ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/edit.html.erb:13
+  Rendered docs/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 115ms (Views: 110.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/docs/2/edit" for 127.0.0.1 at 2018-05-24 01:47:48 -0500
+Processing by DocsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDoc Load (1.1ms)[0m  [1m[34mSELECT  "docs".* FROM "docs" WHERE "docs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:44
+  Rendering docs/edit.html.erb within layouts/application
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/docs/edit.html.erb:13
+  Rendered docs/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 129ms (Views: 122.8ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/docs/2" for 127.0.0.1 at 2018-05-24 01:48:00 -0500
+Processing by DocsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bN/WhpoAUcHHS1Sy98HMt6Fhw/Eux8EPcdk8Ikp5sCa8Lf1cuJk2E/9CR8PBXi3r8D6s6MFV7S+3MGd4q5GGJA==", "doc"=>{"pqr_id"=>"1", "name"=>"jhgkjjbjbtttttttttttt"}, "commit"=>"Crear", "id"=>"2"}
+  [1m[36mDoc Load (0.5ms)[0m  [1m[34mSELECT  "docs".* FROM "docs" WHERE "docs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:44
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/docs_controller.rb:26
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/docs_controller.rb:26
+  [1m[36mDoc Update (0.6ms)[0m  [1m[33mUPDATE "docs" SET "name" = $1, "updated_at" = $2 WHERE "docs"."id" = $3[0m  [["name", "jhgkjjbjbtttttttttttt"], ["updated_at", "2018-05-24 06:48:00.090155"], ["id", 2]]
+  ↳ app/controllers/docs_controller.rb:26
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/docs_controller.rb:26
+Redirected to http://localhost:3000/docs
+Completed 302 Found in 45ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:48:00 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.9ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:14
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/docs/index.html.erb:19
+  Rendered docs/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 133ms (Views: 130.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/notifications/new" for 127.0.0.1 at 2018-05-24 01:48:55 -0500
+Processing by NotificationsController#new as HTML
+  Rendering notifications/new.html.erb within layouts/application
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT "pqrs".* FROM "pqrs"[0m
+  ↳ app/views/notifications/new.html.erb:17
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/notifications/new.html.erb:22
+  Rendered notifications/new.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 172ms (Views: 148.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/notifications" for 127.0.0.1 at 2018-05-24 01:48:58 -0500
+Processing by NotificationsController#index as HTML
+  Rendering notifications/index.html.erb within layouts/application
+  [1m[36mNotification Load (0.5ms)[0m  [1m[34mSELECT "notifications".* FROM "notifications"[0m
+  ↳ app/views/notifications/index.html.erb:17
+  [1m[36mPqr Load (0.4ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:23
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/notifications/index.html.erb:24
+  Rendered notifications/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 156ms (Views: 152.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/docs" for 127.0.0.1 at 2018-05-24 01:49:40 -0500
+Processing by DocsController#index as HTML
+  Rendering docs/index.html.erb within layouts/application
+  [1m[36mDoc Load (0.3ms)[0m  [1m[34mSELECT "docs".* FROM "docs"[0m
+  ↳ app/views/docs/index.html.erb:16
+  [1m[36mPqr Load (0.2ms)[0m  [1m[34mSELECT  "pqrs".* FROM "pqrs" WHERE "pqrs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/docs/index.html.erb:21
+  Rendered docs/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 106ms (Views: 103.1ms | ActiveRecord: 0.5ms)
+
+
