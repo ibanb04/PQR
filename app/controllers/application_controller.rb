@@ -7,4 +7,5 @@ before_action :configure_devise_params, if: :devise_controller?
 		end
 	end
 
+	
 end
