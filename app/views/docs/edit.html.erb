@@ -1,0 +1,30 @@
+<section class="valign-wrapper">
+
+<div class="container">
+<div class="row">
+  <div class="col s12  m12 l12">
+    
+    <div class="card hoverable" style="background-color: rgba(255,255,255,.15);" id="card-login">
+
+    <%= form_for @doc do |f| %>
+
+        <div class="field col s12 validate">
+            <%= f.label :PQR %><br/>
+            <%= f.select "pqr_id", Pqr.all.collect {|x| [x.description, x.id]},{}, class: "multiple"%>
+        </div>
+
+        <div class="field col s12 validate">
+            <%= f.label :name %>
+            <%= f.text_field :name, autofocus: true %>
+        </div>
+
+        <div class="actions card-action center-align ">
+            <%= f.submit "Crear",  class: 'waves-effect waves-light btn blue'%>
+        </div>
+
+    <% end %>
+    </div>
+    </div>
+ </div>
+</div>
+</section>

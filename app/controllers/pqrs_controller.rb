@@ -2,11 +2,12 @@ class PqrsController < ApplicationController
     before_action :set_pqr, only: [:edit, :update, :destroy]
 
     def index
-    @pqrs = Pqr.all
+            @pqrs = Pqr.all
     end
 
     def new
-    @pqr = Pqr.new
+        @users = User.all
+        @pqr = Pqr.new
     end
 
     def create

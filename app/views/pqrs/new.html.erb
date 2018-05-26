@@ -16,7 +16,7 @@
  <div class="row">
       <div class="field col s12 validate">
       <%= f.label :Usuario %><br/>
-      <%= f.select "user_id", User.all.collect {|x| [x.username, x.id]},{}, class: "multiple"%>
+      <%= f.select :user_id, options_for_select(@users.map{|x| [x.username, x.id]}), class: "multiple"%>
       </div>
 
       <div class="field col s6 validate">
@@ -75,7 +75,7 @@
 </div>
 
     <div class="actions card-action center-align ">
-    <%= f.submit "Crear", class: 'waves-effect waves-light btn cyan'%>
+    <%= f.submit %>
     </div>
     
   <% end %>

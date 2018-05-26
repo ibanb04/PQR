@@ -18,6 +18,17 @@
             <div class="nav-wrapper blue">
               <ul id="nav-mobile" class="left hide-on-med-and-down right">
               <li>
+              <%= link_to "Regresar", user_session_path %>
+            </li>
+              <li>
+              <%= link_to "PQR", pqrs_path %>
+            </li>
+              <li>
+              <%= current_user.username %>
+            </li>
+
+              <li>
+                
                 <%= link_to "Salir", destroy_user_session_path, method: :delete %>
               </li>
           <% end %>
@@ -31,7 +42,8 @@
       <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
-  </body>
+    </body>
+
 
  <footer class="page-footer blue darken-3">
     <div class="container">
